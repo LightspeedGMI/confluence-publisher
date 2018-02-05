@@ -55,7 +55,7 @@ class ConfluenceRestApiBase(object):
         log.debug('Request URL: %s', url)
         log.debug('Request Arguments: %s', kwargs)
 
-        r = requester(url, **kwargs)
+        r = requester(url, verify=False, **kwargs)
         if r.status_code != requests.codes.ok:
             log.error(r.content)
             r.raise_for_status()
