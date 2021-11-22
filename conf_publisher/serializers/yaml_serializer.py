@@ -13,8 +13,8 @@ OrderedDumper.add_representer(OrderedDict, _dict_representer)
 
 
 def load(stream):
-    return yaml.load(stream)
+    return yaml.safe_load(stream)
 
 
 def dump(data, stream=None):
-    return yaml.dump(data, stream=stream, Dumper=OrderedDumper, default_flow_style=False)
+    return yaml.safe_dump(data, stream=stream, Dumper=OrderedDumper, default_flow_style=False)
