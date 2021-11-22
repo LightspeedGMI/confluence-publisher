@@ -7,7 +7,7 @@ long_description = open('README.rst' if os.path.exists('README.rst') else 'READM
 
 setup(
     name='confluence-publisher',
-    version='1.2.1',
+    version='1.2.1.1',
     packages=find_packages(exclude=['tests', 'tests.*']),
     include_package_data=True,
     license='MIT',
